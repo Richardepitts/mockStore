@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: lightblue;
+  color: white;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background-color: #0f293a;
+}
+
+.cartParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ResideoLogo {
+  background-image: url('./ResideoPro.png');
+  background-size: 100% 100%;
+  height: 120px; 
+  width: 424px; 
+  position: relative;
+  right: 13px;
+}
+
+.mainNav {
+  background-color: #0f293a;
+}
+
+.colorMeNot {
+  color: #2a99d4;
+}
+
+.colorLink {
+  color: #2a99d4;
+  font-size: 21px;
+  font-weigcht: 600;
+  font-family: "roboto",sans-serif;
+}
+
+.Store {
+  text-align: center;
+}
+
+.containerParent {
+  display: flex;
+  height: 70vh;
+  margin-top: 376px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 10vh;
+  width: 11vw;
+  border-radius: 14px;
+}
+
+.makeLittle {
+  transform: scale(0.8);
+}
+
+.makeMeLittle {
+    transform: scale(0.4);
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 12vh;
+  width: 100vw;
+}
+
+.actionButton:hover {
+  color: white;
+  background-color: #184263;
+  box-shadow: rgba(0, 0, 0, 0.33) 0px 19px 38px, rgba(0, 0, 0, 0.28) 0px 15px 12px;
+}
+
+.actionButton {
+  margin-top: 12px;
+  width: 320px;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 24px;
+  min-width: 0px;
+  background-color: transparent;
+  color: rgb(22, 106, 150);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: center;
+  -webkit-appearance: none;
+  appearance: none;
+  border-color: rgb(22, 106, 150);
+  border-radius: 2rem;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+#anonymousCartModal {
+  height: 60vh;
+  width: 50vw;
+  left: 23vw!important;
+  position: relative;
+  top: 23vh!important;
+  border-radius: 12px!important;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.anonymousCartContainer {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.itemName {
+  margin-top: 3px;
+}
+
+.anonymousCartDataContainer {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 413px;
+  border-radius: 8px;
+}
+
+.containerParent {
+  display: flex;
+  justify-content: center;
+}
