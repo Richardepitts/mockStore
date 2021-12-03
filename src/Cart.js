@@ -17,7 +17,7 @@ const Cart = () => {
     let address = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com';
     let siteUid = 'powertools';
     let usertype = 'anil.gupta@rustic-hw.com';
-    let userToken = 'KiUiQ0e7D5xlW1VyuxBxi8SaZw0';
+    let userToken = '27XN2BktDoKNlvcD_Ri6ulvKyT8';
 
     const makeModalDisappear = () => {
         setCartCreationModalIsOpen(false)
@@ -56,16 +56,48 @@ const Cart = () => {
           })
     .catch(function (error) { console.log(error)})}
 
-    const addToCartRegisteredB2B = () => {
-        var headers = { 'Authorization': `Bearer ${userToken}` }
-        axios.post(`${address}/occ/v2/${siteUid}/orgUsers/${usertype}/carts/${cartID}/entries`, 
-        { "code": `3755219`, "quantity": 1 }, { 'headers' : headers })
-          .then(res => {
-            console.log(res.data)
-            setCartSelectedModalIsOpen(true)
-              const object = res.data;
-              let arrInput = [];
-          })
+    // const addToCartRegisteredB2B = () => {
+    //     var headers = { 'Authorization': `Bearer ${userToken}` }
+    //     axios.post(`${address}/occ/v2/${siteUid}/orgUsers/${usertype}/carts/${cartID}/entries`, 
+    //     { "code": 3755219, "quantity": 1 }, { 'headers' : headers })
+    //       .then(res => { console.log(res.data) })
+    // .catch(function (error) { console.log(error)})}
+
+
+
+
+
+    const sendInvoiceDataToServer = () => {
+        // USERTOKEN \/:
+        var headers = { 'Authorization': `Bearer ${userToken}`, 'Content-Type': 'application/json' }
+        // URL ADDRESS \/:
+        axios.post(`${address}/${siteUid}/users/${usertype}/invoiceData`, 
+        // BODY INFO \/: 
+        { "item_id": 123456, "item_name": "air filter", "price":120, quantity: 12 }, { 'headers' : headers })
+          .then(res => { 
+              // HERE YOU WORK ON THE DATA, USUALLY WITH USESTATE HOOKS
+              console.log(res.data) 
+            
+            })
+    
+            .catch(function (error) { console.log(error)})}
+
+
+
+
+
+
+
+
+
+
+
+
+    const addBundleToCartRegistered = () => {
+        var headers = { 'Authorization': `Bearer ${userToken}`, 'Content-Type': 'application/json' }
+        axios.post(`${address}/occ/v2/${siteUid}/users/${usertype}/carts/${cartID}/bundles`, 
+        { "templateId": "StarterDrillComponent", "productCode": "3755211", "quantity":1 }, { 'headers' : headers })
+          .then(res => { console.log(res.data) })
     .catch(function (error) { console.log(error)})}
 
     const getUserCarts = () => {
@@ -89,15 +121,16 @@ const Cart = () => {
     
     return (
         <div className='cartParent'>
-            <h1>Welcome to the Cart Page</h1>
+            <h1>The Cart Page</h1>
                 <div className='buttonsContainer'>
                     <button className='actionButton' onClick={() => createAnonymousCart()}>Create an Guest cart</button>
                     <button className='actionButton' onClick={() => createCartAxiosCall()}>Create a Cart associated with Logged In User</button>
-                    <button className='actionButton' onClick={() => addToCartRegisteredB2B()}>Add Item to User's Cart</button>
+                    {/* <button className='actionButton' onClick={() => addToCartRegisteredB2B()}>Add Item to User's Cart</button> */}
+                    <button className='actionButton' onClick={() => addBundleToCartRegistered()}>Add Item to User's Cart</button>
                     <button className='actionButton' onClick={() => getUserCarts()}>Get All the Logged in Users' Carts</button>
                 </div>
             <div>
-                <div className='containerParent'>
+                <div className='containerParent2'>
                     { allCarts.map((item, i) => (
                         <div className='container'><button onClick={() => cartButtonSelected(item['code'], i)}>{`Cart Codes: ${item['code']}`}</button></div>
                         )
@@ -107,10 +140,10 @@ const Cart = () => {
       </div>
       <Modal isOpen={cartCreationModalIsOpen} id="anonymousCartModal" onRequestClose={() => { makeModalDisappear() }}>
                 <div className="anonymousCartContainer">
-                    <h3>Anonymous Cart Successfully Created!</h3>
+                    <h3>Guest Cart Successfully Created!</h3>
                 </div>
                 <div className="anonymousCartDataContainer">
-                    {Object.entries(anonymousCartData).length === 0 ? console.log('all cats not available!') : 
+                    {Object.entries(anonymousCartData).length === 0 ? console.log(' not available!') : 
                         <React.Fragment>
                             <h4>Total Items: {anonymousCartData.totalItems}</h4> 
                             <h4>Total Price: {anonymousCartData.totalPrice.formattedValue}</h4> 

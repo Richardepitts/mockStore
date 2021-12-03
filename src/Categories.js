@@ -60,7 +60,7 @@ function Categories() {
 
   return (
     <div>
-      <h1>Categories Page</h1>
+      <h1>The Categories Page</h1>
       <button className="actionButton" onClick={() => { CallProductCategories()} }>Click to reveal Product Categories</button>
       <div className='containerParent'>
            { productCategories.map(x => (

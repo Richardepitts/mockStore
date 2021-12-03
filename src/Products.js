@@ -8,7 +8,9 @@ function Products() {
     const [ productCatalog, setProductCatalog ] = useState({})
     const [ productNameTitle, setProductNameTitle ] = useState('Hey this is the product name')
     const [ productInfoModalIsOpen, setProductInfoModalIsOpen ] = useState(false)
+    const [ allProductInfoModalIsOpen, setAllProductInfoModalIsOpen ] = useState(false)
     const [ productInfo, setProductInfo ] = useState({})
+    const [ allProductInfo, setAllProductInfo ] = useState({})
     const [ productCategories, setProductCategories ] = useState(['This', 'Will', 'Become', 'Categories'])
     const [ productSelection, setProductSelection ] = useState(['And', 'Products'])
     let address = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com';
@@ -16,12 +18,14 @@ function Products() {
 
     const makeModalDisappear = () => {
       setProductInfoModalIsOpen(false)
+      setAllProductInfoModalIsOpen(false)
   }
 
     const CallProductSelection = () => {
       axios.get(`${address}/occ/v2/${siteUid}/products/3592865/`)
           .then(res => {
-              // setProductSelection(res.data);
+              setAllProductInfoModalIsOpen(true)
+              setAllProductInfo(res.data);
               console.log(res.data);
               const object = res.data;
               let arrInput = [];
@@ -51,8 +55,8 @@ function Products() {
   return (
     <div>
       <h1>The Product Selection Page</h1>
-      <button className='actionButton' onClick={() => { CallProductSelection()} }>Get Products</button>
-      <button className='actionButton' onClick={() => { CallProductInfo()} }>Get Product Info</button>
+      <button className='actionButton' onClick={() => { CallProductSelection()} }>Get All Products</button>
+      <button className='actionButton' onClick={() => { CallProductInfo()} }>Get Single Product Info</button>
       <div className='containerParent'>
            { productSelection.map(x => (
                <div className='container' id={x} onClick={() => {productSelectionFn(x)} }>{x}</div>
@@ -67,10 +71,15 @@ function Products() {
               <div className="anonymousCartDataContainer">
                   <h1>Manufacturer: {productInfo.manufacturer}</h1>
                   <h1>Code: {productInfo.code}</h1>
-                  {/* <h1 style={{transform: 'scale(0.5)'}}>Code: {productInfo.description}</h1> */}
-                  {/* <h1>Price: {productInfo.price}</h1> */}
-                  {/* <h1>{productInfo.summary}</h1>
-                  <h1>{productInfo.summary}</h1> */}
+                  </div>
+          </Modal>
+          <Modal isOpen={allProductInfoModalIsOpen} id="anonymousCartModal" onRequestClose={() => { makeModalDisappear() }}>
+              <div className="anonymousCartContainer">
+                  <h3>There are only two products in Mock DB...</h3>
+              </div>
+              <div className="anonymousCartDataContainer">
+                  <h1>Product 1: {productSelection[0]}</h1>
+                  <h1>Product 2: {productSelection[1]}</h1>
                   </div>
           </Modal>
     </div>
