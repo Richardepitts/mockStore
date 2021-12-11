@@ -17,7 +17,7 @@ const Cart = () => {
     let address = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com';
     let siteUid = 'powertools';
     let usertype = 'anil.gupta@rustic-hw.com';
-    let userToken = '27XN2BktDoKNlvcD_Ri6ulvKyT8';
+    let userToken = 'Nocbk80MUZBPZ7Bcjqjld0hoqLQ';
 
     const makeModalDisappear = () => {
         setCartCreationModalIsOpen(false)
@@ -32,16 +32,6 @@ const Cart = () => {
               console.log(res.data)
               let obj = res.data
               setAnonymousCartData(obj)
-              console.log(res.data.subTotal.currencyIso)
-              const object = res.data;
-              let arrInput = [];
-            //   for (const property in object) {
-            //       if (property === 'categories') {
-            //           console.log(`${Array.from(object[property].map(item => { console.log(item.name) })) }`);
-            //           object[property].map(item => { arrInput.push(item.name) }) 
-            //           setProductSelection(arrInput)
-            //       }
-            //   }
           })
     .catch(function (error) { console.log(error)})}
 

@@ -1,0 +1,152 @@
+.homeParent {
+    display: flex;
+    border: 2px solid black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.homeParentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 60vw;
+    height:  640px;
+    margin-top: 20px;
+}
+
+.homeContainer1:hover, .homeContainer2:hover, .homeContainer3:hover, .homeContainer4.hover {
+    transform: scale( 1.01);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 24px 25px, rgba(0, 0, 0, 0.28) 0px -12px 30px, rgba(0, 0, 0, 0.08) 0px 4px 6px, rgba(0, 0, 0, 0.11) 0px 12px 13px, rgba(0, 0, 0, 0.02) 0px -3px 5px;
+
+}
+
+.homeContainer1 {
+    display: flex;
+    margin: 12px;
+    border: 2px solid black;
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    background: url('../../R.Assets/PowerDrillsImg.jpeg');
+}
+
+.homeContainer2 {
+    display: flex;
+    margin: 12px;
+    border: 2px solid black;
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    background: url('../../R.Assets/AngleGrindersImg.jpeg');
+}
+
+.homeContainer3 {
+    display: flex;
+    margin: 12px;
+    border: 2px solid black;
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    background: url('../../R.Assets/ScrewDriversImg.jpeg');
+}
+
+.homeContainer4 {
+    display: flex;
+    margin: 12px;
+    border: 2px solid black;
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    background: url('../../R.Assets/SandersImg.jpeg');
+}
+
+.shopCategoryTitle {
+    font-size: 19px;
+    color: black;
+}
+
+.homeCategoryMoniker1:hover, .homeCategoryMoniker2:hover, .homeCategoryMoniker3:hover .homeCategoryMoniker4:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 24px 25px, rgba(0, 0, 0, 0.28) 0px -12px 30px, rgba(0, 0, 0, 0.08) 0px 4px 6px, rgba(0, 0, 0, 0.11) 0px 12px 13px, rgba(0, 0, 0, 0.02) 0px -3px 5px;
+}
+
+.monikerText1:hover, .monikerText2:hover, .monikerText3:hover .monikerText4:hover {
+    transform: scale(1.05);
+}
+
+.homeCategoryMoniker1 {
+    width: 42%;
+    height: 32%;
+    border: 2px solid black;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #86879d;
+}
+.homeCategoryMoniker2 {
+    width: 42%;
+    height: 32%;
+    border: 2px solid black;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #86879d;
+}
+.homeCategoryMoniker3 {
+    width: 42%;
+    height: 32%;
+    border: 2px solid black;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #86879d;
+}
+.homeCategoryMoniker4 {
+    width: 42%;
+    height: 32%;
+    border: 2px solid black;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #86879d;
+}
+.monikerText1 {
+    font-size: 20px;
+    margin-bottom: 9.3px;
+    color: white;
+}
+.monikerText2 {
+    font-size: 20px;
+    margin-bottom: 9.3px;
+    color: white;
+}
+.monikerText3 {
+    font-size: 20px;
+    margin-bottom: 9.3px;
+    color: white;
+}
+.monikerText4 {
+    font-size: 20px;
+    margin-bottom: 9.3px;
+    color: white;
+}
+
+.shopShopNowButton {
+    background: transparent;
+    border: 2px solid transparent;
+}

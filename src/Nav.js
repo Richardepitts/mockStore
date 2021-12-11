@@ -7,9 +7,9 @@ function Nav() {
     <nav className='mainNav'>
         <div className='ResideoLogo'></div>
         <ul className='nav-links'>
-            <Link className='colorLink' style={{textDecoration: 'none'}} to='/Login'> 
+            <Link className='colorLink' style={{textDecoration: 'none'}} to='/Shop'> 
                 <li>
-                    Login
+                    Shop
                 </li>
             </Link> 
             <Link className='colorLink' style={{textDecoration: 'none'}} to='/Products'> 
@@ -25,6 +25,11 @@ function Nav() {
             <Link className='colorLink' style={{textDecoration: 'none'}} to='/cart'> 
                 <li>
                     Cart
+                </li>
+            </Link> 
+            <Link className='colorLink' style={{textDecoration: 'none'}} to='/Login'> 
+                <li>
+                    Login
                 </li>
             </Link> 
         </ul>

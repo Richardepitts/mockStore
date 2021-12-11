@@ -1,9 +1,9 @@
 import './App.css';
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from "react-modal";
 
-function Categories() {
+function Categories({match}) {
     const [ productCatalog, setProductCatalog ] = useState({})
     const [ categoriesModalIsOpen, setCategoriesModalIsOpen ] = useState(false)
     const [ mysteryDataItem, setMysteryDataItem ] = useState([])
@@ -14,6 +14,9 @@ function Categories() {
     const [ productSelection, setProductSelection ] = useState(['And', 'Products'])
     let address = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com';
     let siteUid = 'powertools';
+
+    useEffect(() => {
+    }, [])
 
     const makeModalDisappear = () => {
       setCategoriesModalIsOpen(false)

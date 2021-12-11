@@ -23,7 +23,7 @@ const Login = () => {
     let address = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com';
     let siteUid = 'powertools';
     let usertype = 'anil.gupta@rustic-hw.com';
-    let userToken = '27XN2BktDoKNlvcD_Ri6ulvKyT8';
+    let userToken = 'Nocbk80MUZBPZ7Bcjqjld0hoqLQ';
 
     const makeModalDisappear = () => {
     }
