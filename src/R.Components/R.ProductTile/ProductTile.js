@@ -13,6 +13,10 @@ const ProductTile = ({ code, imgSrc, name, price}) => {
     useEffect(() => {
     }, [])
 
+    const addToCart = () => {
+        alert(`add to cart called ${name} ${code} ${price}`)
+    }
+
     
     return (
         <div className='productTileParent'>
@@ -45,8 +49,8 @@ const ProductTile = ({ code, imgSrc, name, price}) => {
                 </div>
                 <div className='productTitleButtonsContainer'>
                     <div className='productTitleButtonsSubContainer'>
-                        <button className='productTitleToggle productTitleHamburger'>Hey1</button>
-                        <button className='productTitleToggle productTitleAddToCart'>hey2</button>
+                        <div className='productTitleToggleContainer'><button id='productTitleToggle' className='productTitleHamburger'></button></div>
+                        <button onClick={()=> {addToCart(name, code, price)}} className='productTitleAddToCart'>Add to Cart</button>
                     </div>
                 </div>
             </div>

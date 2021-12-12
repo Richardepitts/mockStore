@@ -25,6 +25,7 @@
     margin-bottom: 12px;
     border-radius: 36px;
     align-items: center;
+    margin-right: 35px;
     background: url('./buttonOutline.png');
     background-size: 100% 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -37,7 +38,6 @@
     width: 104%;
     border-radius: 17%;
     position: relative;
-    border: 1.5px solid black;
     right: 4.7px;
     bottom: 6px;
     z-index: 0;
@@ -47,7 +47,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    border: 2px solid black;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
 }
@@ -120,36 +119,30 @@
 
 .productTitleButtonsContainer {
     display: flex;
-    border: 2px solid green;
     height: 100%;
-    width: 16%;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .productTitleButtonsSubContainer {
     display: flex;
-    border: 2px solid green;
-    height: 62%;
-    width: 63%;
+    height: 80%;
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
-.productTitleToggle {
-    height: 60px;
-    width: 60px;
-    border-radius: 12px;
-    transform: scale(.92);
-    border: 3px solid black;
-}
 
 .productTitleHamburger {
     background: url('./hamburgerNew.jpg');
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
 }
 
 .productTitleSquares {
@@ -157,4 +150,29 @@
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    height: 56px;
+    width: 137px;
+}
+
+.productTitleToggleContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.productTitleAddToCart:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.productTitleAddToCart {
+    height: 56px;
+    width: 137px;
+    background: url('./addToCartButton.png');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: orpheus-pro;
+    font-size: 19px;
+    border: 1px solid transparent;
+    border-radius: 128px;
 }
