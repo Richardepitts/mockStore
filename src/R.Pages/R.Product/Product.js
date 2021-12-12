@@ -8,6 +8,8 @@ import { useParams } from 'react-router-dom';
 
 Modal.setAppElement("#root"); 
 const Product = (props) => {
+    let sad = 'sad'
+    const urlPrefix = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com/';
     const { product } = useParams();
     const [ productName, setProductName ] = useState();
     const [ productsArr, setProductsArr ] = useState([]);
@@ -22,7 +24,7 @@ const Product = (props) => {
                 console.log(`here come Power Drills`)
                 console.log(res.data);
                 console.log(res.data.products)
-                console.log(res.data.products[0]);
+                console.log(res.data.products[0].images[1].url);
                 // console.log(category[0].images[1].url);
                 setProductsArr(res.data.products)
                 // console.log(`hey richy:`);
@@ -73,8 +75,8 @@ const Product = (props) => {
             
             <div className='productTilesContainerParent'>
                 <div className='productTilesContainer'>
-                    { productsArr.map((category) => (
-                        <ProductTile imgSrc={'ss'} categoryName={category.name}></ProductTile>
+                    { productsArr.map((category, i) => (
+                        <ProductTile key={i}  imgSrc={category.images[1].url} categoryName={category.name}></ProductTile>
                         ))}
                 </div>
             </div>

@@ -24,9 +24,20 @@
     margin-top: 12px;
     border-radius: 36px;
     align-items: center;
-    background: url('./ProductTile.png');
+    background: url('./buttonOutline.png');
     background-size: 100% 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.productTileImg {
+    height: 101.9%;
+    width: 102.9%;
+    border-radius: 17%;
+    position: relative;
+    border: 2px solid black;
+    right: 4.7px;
+    bottom: 6px;
+    z-index: 0;
 }
 
 .productTileParent {
@@ -36,13 +47,17 @@
 }
 
 .productTile {
-    width: 40%;
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
     font-size: 21px;
 }
 
 .productTileButton {
     border: 2px solid transparent;
     background: transparent;
+    height: 100%;
+    border-radius: 12%;
 }
 
 .productTileLink {
