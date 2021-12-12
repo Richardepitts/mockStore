@@ -35,7 +35,7 @@
 
 .addToCartModalContentsParent {
     display: flex;
-    border: 8px solid green;
+    /* border: 8px solid green; */
     height: 100%;
     width: 100%;
 }
@@ -80,14 +80,14 @@
 
 
 .addToCardModalContentsQuantityIncrementButtonContainer {
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     width: 48%;
     height: 100%;
     color: black;
 }
 
 .addToCardModalContentsQuantityIncrementButton {
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     width: 48%;
     height: 100%;
     color: black;
@@ -101,11 +101,11 @@
 }
 
 .addToCardModalContentsCartContainer {
-
+    width: 30%;
 }
 
 .addToCardModalContentsQuantityContainer {
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
     width: 98%;
     height: 18%;
     color: black;
@@ -114,7 +114,7 @@
 }
     
 .addToCardModalContentsQuantitySubContainer {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     width: 48%;
     height: 100%;
     color: black;
@@ -123,45 +123,141 @@
 }
 
 .addToCardModalContentsQuantityDecrementButtonContainer {
-    border: 3px solid purple;
     width: 88%;
     height: 100%;
     color: black;
 }
 
 .addToCardModalContentsQuantityDecrementButton {
-    border: 3px solid purple;
     width: 100%;
     height: 100%;
     color: black;
 }
+
+.addToCardModalContentsQuantityNumberContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88%;
+    height: 100%;
+    color: black;
+}
+
+.addToCardModalContentsQuantityNumberContainer {
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToCardModalContentsQuantityNumber {
+    font-size: 28px;
+}
 .addToCardModalContentsQuantityDecrementButtonImg {
-    border: 3px solid purple;
     width: 100%;
     height: 100%;
     color: black;
 }
 
 .addToCardModalContentsQuantityIncrementButtonContainer {
-    border: 3px solid purple;
     width: 88%;
     height: 100%;
     color: black;
 }
 
 .addToCardModalContentsQuantityIncrementButton {
-    border: 3px solid purple;
     width: 100%;
     height: 100%;
     color: black;
 }
 .addToCardModalContentsQuantityIncrementButtonImg {
-    border: 3px solid purple;
     width: 100%;
     height: 100%;
     color: black;
 }
 
+.addToCardModalContentsTotalContainer {
+    border: 2px solid black;
+    height: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.addToCardModalContentsTotal {
+    border: 2px solid black;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToCardModalContentsViewCartContainer {
+    border: 2px solid black;
+    height: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToCardModalContentsViewCart {
+    border: 2px solid black;
+    height: 64px;
+    width: 150px;
+    color: black;
+    display: flex;
+    background: url('./viewCartButton.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    background-color: transparent;
+    font-family: orpheus-pro;
+    justify-content: center;
+    align-items: center;
+    border-radius: 120px;
+}
+
+.addToCardModalContentsViewCart:hover, .addToCardModalCheckout:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.addToCardModalContentsCheckoutContainer {
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToCardModalCheckout {
+    height: 100%;
+    background: url('./checkoutButton.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 64px;
+    width: 150px;
+    background-position: 0% 0%;
+    background-color: transparent;
+    /* border: 3px solid transparent; */
+    font-family: orpheus-pro;
+    color: white;
+    border-radius: 120px;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToCardModalViewCartButtonText {
+    color: black;
+    font-size: 21px;
+}
+
+.addToCardModalCheckoutButtonText {
+    color: white;
+    font-size: 24px;
+}
 
 

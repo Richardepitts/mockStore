@@ -51,25 +51,54 @@ content: {
             <div className='addToCardModalContentsProductCode'><strong>Product Code: &nbsp;</strong>{props.codeForModal}</div>
             <div className='addToCardModalContentsProductPrice'><strong>Product Price: &nbsp;</strong>{props.priceForModal}</div>
 
-            <div className='addToCardModalContentsProductTotal'></div>
+            {/* <div className='addToCardModalContentsProductTotal'></div> */}
             {/* <img className='addToCardModalDialoguePicture' src={prefix + props.imgSrcForModal}/> */}
+            <div className='addToCardModalContentsViewCartContainer'>
+                    <button className='addToCardModalContentsViewCart'>
+                        <span className='addToCardModalViewCartButtonText'>View Cart</span>
+                    </button>
+                </div>
         </div>
         <div className='addToCardModalContentsCartContainer'>
-        <div className='addToCardModalContentsQuantityContainer'>
-                <div className='addToCardModalContentsQuantitySubContainer'>
-                    <div className='addToCardModalContentsQuantityDecrementButtonContainer'>
-                        <div className='addToCardModalContentsQuantityDecrementButton'>
-                            <img className='addToCardModalContentsQuantityDecrementButtonImg' src={DecrementButton}/>
+            <div className='addToCardModalContentsQuantityContainer'>
+                    <div className='addToCardModalContentsQuantitySubContainer'>
+                        <div className='addToCardModalContentsQuantityDecrementButtonContainer'>
+                            <div className='addToCardModalContentsQuantityDecrementButton'>
+                                <img className='addToCardModalContentsQuantityDecrementButtonImg' src={DecrementButton}/>
+                            </div>
                         </div>
+
+                        <div className='addToCardModalContentsQuantityNumberContainer'>
+                            <div className='addToCardModalContentsQuantityNumberSubContainer'>
+                                <div className='addToCardModalContentsQuantityNumber'>1</div>
+                            </div>
+                        </div>
+
+                        <div className='addToCardModalContentsQuantityIncrementButtonContainer'>
+                            <div className='addToCardModalContentsQuantityIncrementButton'>
+                                <img className='addToCardModalContentsQuantityIncrementButtonImg' src={IncrementButton}/>
+                            </div>
+                        </div>
+
                     </div>
-                    <div className='addToCardModalContentsQuantityIncrementButtonContainer'>
-                        <div className='addToCardModalContentsQuantityIncrementButton'>
-                            <img className='addToCardModalContentsQuantityIncrementButtonImg' src={IncrementButton}/>
-                        </div>
+
+                </div>
+                <div className='addToCardModalContentsTotalContainer'>
+                    <div className='addToCardModalContentsTotal'>
+                        Total:
                     </div>
                 </div>
+                {/* <div className='addToCardModalContentsViewCartContainer'>
+                    <button className='addToCardModalContentsViewCart'>
+                        <span className='addToCardModalViewCartButtonText'>View Cart</span>
+                    </button>
+                </div> */}
+                <div className='addToCardModalContentsCheckoutContainer'>
+                    <button className='addToCardModalCheckout'>
+                        <span className='addToCardModalCheckoutButtonText'>Checkout</span>
+                    </button>
+                </div>
             </div>
-        </div>
     </div>
 
     <div className=''></div>
