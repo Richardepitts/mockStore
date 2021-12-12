@@ -176,3 +176,12 @@
     border: 1px solid transparent;
     border-radius: 128px;
 }
+
+#addToCartModal {
+    border: 2px solid black;
+}
+
+#productTileModalContainer {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,167 @@
+#AddToCartModal {
+
+}
+
+.addToCartModalParent {
+    display: flex;
+    border: 2px solid black;
+    height: 100%;
+    flex-direction: column;
+}
+
+.addToCartModalCloseButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 4%;
+}
+
+.addToCartModalCloseButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.addToCartModalCloseButton {
+    border-radius: 50%;
+    position: relative;
+    left: 17px;
+    bottom: 17px;
+    background: url('../../R.Assets/xButton.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    height: 28px;
+    width: 28px;
+    border: 2px solid transparent;
+}
+
+.addToCartModalContentsParent {
+    display: flex;
+    border: 8px solid green;
+    height: 100%;
+    width: 100%;
+}
+
+.addToCardModalContentsPictureContainer {
+    border: 8px solid transparent;
+    height: 93%;
+    width: 30%;
+}
+
+.addToCardModalContentsPicture {
+    width: 100%;
+    transform: scale(.9);
+}
+
+.addToCardModalContentsDialogueContainer {
+    border: 3px solid pink;
+    width: 36%;
+}
+
+.addToCardModalContentsProductName {
+    border: 3px solid pink;
+    width: 98%;
+    height: 18%;
+    color: black;
+}
+
+
+.addToCardModalContentsProductCode {
+    border: 3px solid pink;
+    width: 98%;
+    height: 18%;
+    color: black;
+}
+
+.addToCardModalContentsProductPrice {
+    border: 3px solid pink;
+    width: 98%;
+    height: 18%;
+    color: black;
+}
+
+
+.addToCardModalContentsQuantityIncrementButtonContainer {
+    border: 3px solid yellow;
+    width: 48%;
+    height: 100%;
+    color: black;
+}
+
+.addToCardModalContentsQuantityIncrementButton {
+    border: 3px solid yellow;
+    width: 48%;
+    height: 100%;
+    color: black;
+}
+    
+.addToCardModalContentsProductTotal {
+    border: 3px solid pink;
+    width: 98%;
+    height: 18%;
+    color: black;
+}
+
+.addToCardModalContentsCartContainer {
+
+}
+
+.addToCardModalContentsQuantityContainer {
+    border: 3px solid orange;
+    width: 98%;
+    height: 18%;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+    
+.addToCardModalContentsQuantitySubContainer {
+    border: 3px solid green;
+    width: 48%;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.addToCardModalContentsQuantityDecrementButtonContainer {
+    border: 3px solid purple;
+    width: 88%;
+    height: 100%;
+    color: black;
+}
+
+.addToCardModalContentsQuantityDecrementButton {
+    border: 3px solid purple;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.addToCardModalContentsQuantityDecrementButtonImg {
+    border: 3px solid purple;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.addToCardModalContentsQuantityIncrementButtonContainer {
+    border: 3px solid purple;
+    width: 88%;
+    height: 100%;
+    color: black;
+}
+
+.addToCardModalContentsQuantityIncrementButton {
+    border: 3px solid purple;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.addToCardModalContentsQuantityIncrementButtonImg {
+    border: 3px solid purple;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+
+
+

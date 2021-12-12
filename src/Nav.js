@@ -1,7 +1,7 @@
 /* eslint-disable */
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import FontIcon from './R.Assets/FontIcon.png';
+import CartIcon from './R.Assets/CartIcon.png';
 import { Link } from 'react-router-dom';
 
 function Nav() {
@@ -48,7 +48,7 @@ function Nav() {
             </Link> 
         </ul>
         <div onClick={ () => {fontChange()}} className='NavFontIconContainer'>
-            <img className='NavFontIcon' src={FontIcon} alt=''></img>
+            <img className='NavFontIcon' src={CartIcon} alt=''></img>
         </div>
     </nav>
   );
