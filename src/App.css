@@ -70,8 +70,16 @@ nav {
   color: #2a99d4;
   color: white;
   font-size: 17px;
+}
+
+.orpheusFont {
   font-family: orpheus-pro;
 }
+
+.defaultFont {
+  font-family: "roboto",sans-serif;
+}
+
 
 .Store {
   text-align: center;
@@ -189,100 +197,14 @@ nav {
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.center {
-  height: 400px;
-  width: 100%;
+.NavFontIconContainer {
   display: flex;
-  justify-content: center;
+  height: 100%;
   align-items: center;
 }
 
-span {
-  font-family: Arial;
-  font-size: 25px;
-}
-span.type {
-  margin: 0 auto;
-  width: 200px;
-  margin-top: 100px;
-}
-span.type::after {
-  content: "|";
-  display: inline;
-  animation: blink 0.7s infinite;
-}
-
-/*Removes cursor that comes with typed.js*/
-.typed-cursor {
-  opacity: 0;
-  display: none;
-}
-
-/*Custom cursor animation*/
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.NavFontIcon {
+  display: flex;
+  height: 38%;
+  cursor: alias;
 }

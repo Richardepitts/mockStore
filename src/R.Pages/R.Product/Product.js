@@ -6,7 +6,7 @@ import ProductTile from '../../R.Components/R.ProductTile/ProductTile';
 import { useParams } from 'react-router-dom';
 
 Modal.setAppElement("#root"); 
-const Product = ({match}) => {
+const Product = () => {
     const { product } = useParams();
     const [ productName, setProductName ] = useState();
     const [ categories, setCategories ] = useState([]);

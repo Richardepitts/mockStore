@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import './SubProduct.css';
+import './Category.css';
 import Modal from "react-modal";
 import axios from 'axios';
-import ProductTile from '../../R.Components/R.ProductTile/ProductTile';
+import CategoryTile from '../../R.Components/R.CategoryTile/CategoryTile';
 import { useParams } from 'react-router-dom';
 
 Modal.setAppElement("#root"); 
-const SubProduct = ({match}) => {
-    const { product } = useParams();
-    const [ productName, setProductName ] = useState();
+const Category = () => {
+    const { category } = useParams();
+    const [ categoryName, setCategoryName ] = useState();
     const [ categories, setCategories ] = useState([]);
 
     useEffect(() => {
-        console.log(`here comes product`)
-        console.log(product)
-        setProductName(product)
-
+        console.log(`here comes product from useParams`)
+        console.log(category)
+        setCategoryName(category)
 
         axios.get(`https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com/occ/v2/powertools-spa/products/search?fields=products(code%2Cname%2Csummary%2Cconfigurable%2CconfiguratorType%2Cprice(FULL)%2Cimages(DEFAULT)%2Cstock(FULL)%2CaverageRating%2CvariantOptions)%2Cfacets%2Cbreadcrumbs%2Cpagination(DEFAULT)%2Csorts(DEFAULT)%2CfreeTextSearch%2CcurrentQuery&query=%3Arelevance%3AallCategories%3A1355&currentPage=2&pageSize=12&lang=en&curr=USD`)
             .then(res => {
@@ -25,10 +24,10 @@ const SubProduct = ({match}) => {
                 console.log(res.data.facets[0])
                 console.log(res.data.facets[0].values)
                 let indexer = -1;
-                if (product === 'Category') { indexer = 0 }
-                if (product === 'Brand') { indexer = 1 }
-                if (product === 'Price') { indexer = 2 }
-                if (product === 'All') { indexer = 3 }
+                if (category === 'Category') { indexer = 0 }
+                if (category === 'Brand') { indexer = 1 }
+                if (category === 'Price') { indexer = 2 }
+                if (category === 'All') { indexer = 3 }
                 setCategories(res.data.facets[indexer].values)
                 // const object = res.data.facets[indexer].values;
                 // for (const property in object) {
@@ -39,17 +38,19 @@ const SubProduct = ({match}) => {
     }, [])
 
     return (
-        <div className='productParent'>
-            <div className='productTitleContainer'>
-                <div className='productTitle'>
-                    {product}
+        <div className='categoryParent'>
+            <div className='categoryMainTitleContainer'>
+                <div className='categoryTitle'>
+                    {category}
                 </div>
             </div>
             
-            <div className='productTilesContainerParent'>
-                <div className='productTilesContainer'>
+            <div className='categoryTilesContainerParent'>
+                <div className='categoryTilesContainer'>
                     { categories.map((category) => (
-                        <ProductTile categoryName={category.name}></ProductTile>
+                        <div className='categoryTileComponentContainer'>
+                            <CategoryTile categoryName={category.name}></CategoryTile>
+                        </div>
                         ))}
                 </div>
             </div>
@@ -57,4 +58,4 @@ const SubProduct = ({match}) => {
     )
 }
 
-export default SubProduct;
+export default Category;

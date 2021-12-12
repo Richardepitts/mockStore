@@ -1,7 +1,8 @@
 import './App.css';
 import React from 'react';
 import Products from './Products';
-import Product from './R.Pages/R.Product/Product';
+import Category from './R.Pages/R.Category/Category';
+import SubProduct from './R.Pages/R.SubProduct/SubProduct';
 import Shop from './R.Components/R.Shop/Shop';
 import Categories from './Categories';
 // import ProductCategory from './R.components/R.ProductCategory/ProductCategory';
@@ -20,7 +21,8 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path='/Shop' element={<Shop/>}></Route>
-          <Route path='/Shop/:product' element={<Product/>}></Route>
+          <Route path='/Shop/:category' element={<Category/>}></Route>
+          <Route path='/Shop/:product/subproduct' element={<SubProduct/>}></Route>
           <Route exact path='/login' element={<Login/>}></Route>
           <Route exact path='/products' element={<Products/>}></Route>
           <Route exact path='/categories' element={<Categories/>}></Route>

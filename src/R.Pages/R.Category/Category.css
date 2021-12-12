@@ -1,0 +1,50 @@
+.categoryParent {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.categoryMainTitleContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 9px;
+}
+
+.categoryTitleContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 9px;
+    box-shadow: rgba(151, 151, 151, 0.35) 0px 5px 15px;
+
+}
+
+.categoryTitle {
+
+}
+
+.categoryTilesContainerParent {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.categoryTilesContainer {
+    height: 100vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.categoryTileComponentContainer {
+    display: flex;
+    height: 300px;
+    width: calc(50% - 4px);
+    justify-content: center;
+    align-items: center;
+}

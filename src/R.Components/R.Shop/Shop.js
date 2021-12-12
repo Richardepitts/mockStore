@@ -39,7 +39,7 @@ const Shop = ({ match }) => {
                     <div className='homeCategoryMoniker1'>
                         <div className='monikerText1'>
                             <div className='shopCategoryTitle'>Category</div>
-                            <button className='shopShopNowButton'><Link to={`/Shop/Category`}>Shop Now</Link></button>
+                            <button className='shopShopNowButton'><Link className='shopShopNowButton' to={`/Shop/Category`}>Shop Now</Link></button>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ const Shop = ({ match }) => {
                     <div className='homeCategoryMoniker2'>
                         <div className='monikerText2'>
                             <div className='shopCategoryTitle'>Brand</div>
-                            <button className='shopShopNowButton'><Link to={`/Shop/Brand`}>Shop Now</Link></button>
+                            <button className='shopShopNowButton'><Link className='shopShopNowButton' to={`/Shop/Brand`}>Shop Now</Link></button>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const Shop = ({ match }) => {
                     <div className='homeCategoryMoniker3'>
                         <div className='monikerText3'>
                         <div className='shopCategoryTitle'>Price</div>
-                        <button className='shopShopNowButton'><Link to={`/Shop/Price`}>Shop Now</Link></button>
+                        <button className='shopShopNowButton'><Link className='shopShopNowButton' to={`/Shop/Price`}>Shop Now</Link></button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ const Shop = ({ match }) => {
                     <div className='homeCategoryMoniker4'>
                         <div className='monikerText4'>
                         <div className='shopCategoryTitle'>All</div>
-                        <button className='shopShopNowButton'><Link to={`/Shop/All`}>Shop Now</Link></button>
+                        <button className='shopShopNowButton'><Link className='shopShopNowButton' to={`/Shop/All`}>Shop Now</Link></button>
                         </div>
                     </div>
                 </div>
