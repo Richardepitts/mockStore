@@ -15,8 +15,6 @@ const Product = (props) => {
     const [ productsArr, setProductsArr ] = useState([]);
 
     useEffect(() => {
-        console.log(`here comes product`)
-        console.log(product)
 
         if (product === 'Power Drills')  { 
             axios.get(`https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com/occ/v2/powertools-spa/products/search?fields=products(code%2Cname%2Csummary%2Cconfigurable%2CconfiguratorType%2Cprice(FULL)%2Cimages(DEFAULT)%2Cstock(FULL)%2CaverageRating%2CvariantOptions)%2Cfacets%2Cbreadcrumbs%2Cpagination(DEFAULT)%2Csorts(DEFAULT)%2CfreeTextSearch%2CcurrentQuery&query=%3Arelevance%3AallCategories%3A1360&pageSize=12&lang=en&curr=USD`)
@@ -76,7 +74,7 @@ const Product = (props) => {
             <div className='productTilesContainerParent'>
                 <div className='productTilesContainer'>
                     { productsArr.map((category, i) => (
-                        <ProductTile key={i}  imgSrc={category.images[1].url} categoryName={category.name}></ProductTile>
+                        <ProductTile key={i} code={category.code} price={category.price.formattedValue} imgSrc={category.images[1].url} name={category.name}></ProductTile>
                         ))}
                 </div>
             </div>
