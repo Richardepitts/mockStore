@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react'
 import './Shop.css';
 import Modal from "react-modal";
