@@ -48,7 +48,8 @@
     display: flex;
     justify-content: center;
     border: 2px solid black;
-
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
 }
 .productTileSubParent {
     width: 77%;
@@ -100,7 +101,7 @@
 .productTileDialogueContainer {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 31.3%;
     height: 100%;
     display: flex;
     align-content: center;
@@ -115,4 +116,45 @@
     display: flex;
     align-content: flex-start;
     justify-content: flex-start;
+}
+
+.productTitleButtonsContainer {
+    display: flex;
+    border: 2px solid green;
+    height: 100%;
+    width: 16%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.productTitleButtonsSubContainer {
+    display: flex;
+    border: 2px solid green;
+    height: 62%;
+    width: 63%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productTitleToggle {
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+    transform: scale(.92);
+    border: 3px solid black;
+}
+
+.productTitleHamburger {
+    background: url('./hamburgerNew.jpg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.productTitleSquares {
+    background: url('./squaresNew.jpg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }

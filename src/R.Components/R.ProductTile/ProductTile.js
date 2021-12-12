@@ -41,6 +41,13 @@ const ProductTile = ({ code, imgSrc, name, price}) => {
 
                 </div>
 
+
+                </div>
+                <div className='productTitleButtonsContainer'>
+                    <div className='productTitleButtonsSubContainer'>
+                        <button className='productTitleToggle productTitleHamburger'>Hey1</button>
+                        <button className='productTitleToggle productTitleAddToCart'>hey2</button>
+                    </div>
                 </div>
             </div>
         </div>
