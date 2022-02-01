@@ -85,6 +85,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 
 }
 .homeCategoryMoniker2 {
@@ -96,6 +97,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 
 }
 .homeCategoryMoniker3 {
@@ -107,6 +109,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 }
 .homeCategoryMoniker4 {
     width: 42%;
@@ -117,6 +120,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 
 }
 .monikerText1 {

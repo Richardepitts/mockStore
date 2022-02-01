@@ -1,12 +1,24 @@
 #AddToCartModal {
-
+    animation: opacityShifter .6s ease-out;
+    background: rgb(201,201,201)!important;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%)!important;
+    /* radial-gradient(circle, rgba(201,201,201,1) 0%, rgba(195,193,193,1) 49%, rgba(165,172,173,1) 100%)!important; */
+    border-radius: 3px;
 }
 
 .addToCartModalParent {
     display: flex;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 100%;
     flex-direction: column;
+}
+@keyframes opacityShifter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .addToCartModalCloseButtonContainer {
@@ -17,19 +29,19 @@
 }
 
 .addToCartModalCloseButton:hover {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 .addToCartModalCloseButton {
     border-radius: 50%;
     position: relative;
-    left: 17px;
-    bottom: 17px;
+    left: 14px;
+    bottom: 14px;
     background: url('../../R.Assets/xButton.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0% 0%;
-    height: 28px;
-    width: 28px;
+    height: 18px;
+    width: 18px;
     border: 2px solid transparent;
 }
 
@@ -49,33 +61,39 @@
 .addToCardModalContentsPicture {
     width: 100%;
     transform: scale(.9);
+    height: 100%;
 }
 
 .addToCardModalContentsDialogueContainer {
-    border: 3px solid pink;
+    border: 3px solid transparent;
     width: 36%;
+    margin-top: 7px;
+    margin-left: 7px;
 }
 
 .addToCardModalContentsProductName {
-    border: 3px solid pink;
+    border: 3px solid transparent;
     width: 98%;
     height: 18%;
     color: black;
+    font-size: 18px;
 }
 
 
 .addToCardModalContentsProductCode {
-    border: 3px solid pink;
+    border: 3px solid transparent;
     width: 98%;
     height: 18%;
     color: black;
+    font-size: 18px;
 }
 
 .addToCardModalContentsProductPrice {
-    border: 3px solid pink;
+    border: 3px solid transparent;
     width: 98%;
     height: 18%;
     color: black;
+    font-size: 18px;
 }
 
 
@@ -95,7 +113,7 @@
 }
     
 .addToCardModalContentsProductTotal {
-    border: 3px solid pink;
+    border: 3px solid transparent;
     width: 98%;
     height: 18%;
     color: black;
@@ -118,6 +136,8 @@
 .addToCardModalContentsQuantitySubContainer {
     /* border: 3px solid green; */
     width: 73.5%;
+    top: 10.2px;
+    position: relative;
     height: 100%;
     color: black;
     display: flex;
@@ -131,7 +151,7 @@
 }
 
 .addToCardModalContentsQuantityDecrementButton:hover, .addToCardModalContentsQuantityIncrementButton:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
 }
 
 .addToCardModalContentsQuantityDecrementButton {
@@ -139,6 +159,7 @@
     height: 48px;
     border-radius: 55px;
     color: black;
+    transform: scale(0.7);
 }
 
 .addToCardModalContentsQuantityNumberContainer {
@@ -163,9 +184,10 @@
     font-size: 28px;
 }
 .addToCardModalContentsQuantityDecrementButtonImg {
-    width: 100%;
+    width: 60%;
     height: 100%;
     color: black;
+    margin-left: 19px;
 }
 
 .addToCardModalContentsQuantityIncrementButtonContainer {
@@ -178,15 +200,16 @@
     width: 48px;
     height: 48px;
     color: black;
+    transform: scale(.7);
 }
 .addToCardModalContentsQuantityIncrementButtonImg {
-    width: 100%;
+    width: 60%;
     height: 100%;
     color: black;
 }
 
 .addToCardModalContentsTotalContainer {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 23%;
     display: flex;
     justify-content: center;
@@ -194,8 +217,9 @@
 }
 
 .addToCardModalContentsTotal {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 100%;
+    font-size: 23px;
     color: black;
     display: flex;
     justify-content: center;
@@ -203,46 +227,48 @@
 }
 
 .addToCardModalContentsViewCartContainer {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 23%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 11px;
 }
 
 .addToCardModalContentsViewCart {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 64px;
     width: 150px;
-    color: black;
+    color: white;
     display: flex;
-    background: url('./viewCartButton.png');
+    /* background: url('./viewCartButton.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: 0% 0%;
-    background-color: transparent;
+    background-position: 0% 0%; */
+    background-color: #10283a;
+    border-radius: 2px;
     font-family: orpheus-pro;
     justify-content: center;
     align-items: center;
-    border-radius: 120px;
 }
 
 .addToCardModalContentsViewCart:hover, .addToCardModalCheckout:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 10px 10px;
 }
 
 .addToCardModalContentsCheckoutContainer {
-    height: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 45%;
 }
 
 .addToCardModalCheckout {
     height: 100%;
-    background: url('./checkoutButton.png');
+    /* background: url('./checkoutButton.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
     height: 64px;
     width: 150px;
     background-position: 0% 0%;
@@ -250,7 +276,8 @@
     /* border: 3px solid transparent; */
     font-family: orpheus-pro;
     color: white;
-    border-radius: 120px;
+    background-color: #10283a;
+    border-radius: 2px;
     font-size: 21px;
     display: flex;
     justify-content: center;
@@ -258,7 +285,7 @@
 }
 
 .addToCardModalViewCartButtonText {
-    color: black;
+    color: white;
     font-size: 21px;
 }
 

@@ -9,14 +9,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 60vw;
-    height:  640px;
+    width: 1200px;
+    height: 888px;
     margin-top: 20px;
 }
 
 .homeContainer1:hover, .homeContainer2:hover, .homeContainer3:hover, .homeContainer4.hover {
-    transform: scale( 1.01);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 24px 25px, rgba(0, 0, 0, 0.28) 0px -12px 30px, rgba(0, 0, 0, 0.08) 0px 4px 6px, rgba(0, 0, 0, 0.11) 0px 12px 13px, rgba(0, 0, 0, 0.02) 0px -3px 5px;
+    /* transform: scale( 1.008); */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 24px 25px, rgba(0, 0, 0, 0.2) 0px -12px 30px, rgba(0, 0, 0, 0.06) 0px 4px 6px, rgba(0, 0, 0, 0.11) 0px 12px 13px, rgba(0, 0, 0, 0.02) 0px -3px 5px;
 
 }
 
@@ -28,8 +28,7 @@
     height: 95%;
     justify-content: center;
     align-items: center;
-    border-radius: 9px;
-    background: url('../../R.Assets/PowerDrillsImg.jpeg');
+    border-radius: 2px;
 }
 
 .homeContainer2 {
@@ -40,8 +39,7 @@
     height: 95%;
     justify-content: center;
     align-items: center;
-    border-radius: 9px;
-    background: url('../../R.Assets/AngleGrindersImg.jpeg');
+    border-radius: 2px;
 }
 
 .homeContainer3 {
@@ -52,8 +50,7 @@
     height: 95%;
     justify-content: center;
     align-items: center;
-    border-radius: 9px;
-    background: url('../../R.Assets/ScrewDriversImg.jpeg');
+    border-radius: 2px;
 }
 
 .homeContainer4 {
@@ -64,23 +61,22 @@
     height: 95%;
     justify-content: center;
     align-items: center;
-    border-radius: 9px;
-    background: url('../../R.Assets/SandersImg.jpeg');
+    border-radius: 2px;
 }
 
 .shopCategoryTitle {
-    font-size: 19px;
-    color: white;
+    font-size: 28px;
+    color: black;
     font-family: orpheus-pro;
 }
 
 .homeCategoryMoniker1:hover, .homeCategoryMoniker2:hover, .homeCategoryMoniker3:hover .homeCategoryMoniker4:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 24px 25px, rgba(0, 0, 0, 0.28) 0px -12px 30px, rgba(0, 0, 0, 0.08) 0px 4px 6px, rgba(0, 0, 0, 0.11) 0px 12px 13px, rgba(0, 0, 0, 0.02) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 24px 25px, rgba(0, 0, 0, 0.08) 0px -12px 30px, rgba(0, 0, 0, 0.03) 0px 4px 6px, rgba(0, 0, 0, 0.07) 0px 12px 13px, rgba(0, 0, 0, 0.02) 0px -3px 5px;
 }
 
 
 .monikerText1:hover, .monikerText2:hover, .monikerText3:hover .monikerText4:hover {
-    transform: scale(1.05);
+    transform: scale(1.006);
 }
 
 .homeCategoryMoniker1, .homeCategoryMoniker2, .homeCategoryMoniker3, .homeCategoryMoniker4 {
@@ -99,6 +95,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 }
 .homeCategoryMoniker2 {
     width: 42%;
@@ -109,6 +106,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 }
 .homeCategoryMoniker3 {
     width: 42%;
@@ -119,6 +117,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 }
 .homeCategoryMoniker4 {
     width: 42%;
@@ -129,28 +128,31 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(221,221,221,1) 49%, rgba(198,198,198,1) 100%);
 }
 .monikerText1 {
-    font-size: 20px;
-    color: white;
+    font-size: 23px;
+    color: black;
 }
 .monikerText2 {
-    font-size: 20px;
-    color: white;
+    font-size: 23px;
+    color: black;
 }
 .monikerText3 {
-    font-size: 20px;
-    color: white;
+    font-size: 23px;
+    color: black;
 }
 .monikerText4 {
-    font-size: 20px;
-    color: white;
+    font-size: 23px;
+    color: black;
 }
 
 .shopShopNowButton {
     background: transparent;
     border: 2px solid transparent;
     text-decoration: none;
-    color: white;
+    color: black;
+    font-family: orpheus-pro;
+    font-size: 18px;
     padding-top: 7px;
 }

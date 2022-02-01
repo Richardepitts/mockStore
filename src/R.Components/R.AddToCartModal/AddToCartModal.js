@@ -1,19 +1,46 @@
 import React, { useState, useEffect }  from 'react';
 import Modal from "react-modal";
 import xButton from '../../R.Assets/xButton.png';
-import DecrementButton from '../../R.Assets/DecrementButton.png';
-import IncrementButton from '../../R.Assets/IncrementButton.png';
+import DecrementButton from '../../R.Assets/leftArrow.png';
+import IncrementButton from '../../R.Assets/rightArrow.png';
 import './AddToCartModal.css'
 // import createTopicButton from './createTopicButton.png'
 // import createTopicButtonDark from './createTopicButtonDark.png'
 
 export const AddToCartModal = (props) => {
+    const [totalPrice, setTotalPrice] = useState('$12')
+    const [quantityOfItems, setQuantityOfItems] = useState(1)
+    const [priceOfItem, setPriceOfItem] = useState(1)
     const prefix = 'https://api.c8ck9e9y0x-rsivideot1-d1-public.model-t.cc.commerce.ondemand.com/';
     useEffect(() => {
+        let finalPrice = props.priceForModal.replace('$', '').replace('.', '') / 100
+        let finalString = '$' + finalPrice + '.00'
+        setTotalPrice(finalString)
+        setPriceOfItem(props.priceForModal.replace('$', '').replace('.', '') / 100)
+        console.log(props.priceForModal.replace('$', '').replace('.', '') / 100)
+        let viewCartElement = document.querySelector('.addToCardModalContentsViewCart')
     }, [])
 
 const closeCartModal = () => {
     props.setAddToCartModalIsOpen(false)
+}
+
+const decrementClicked = () => {
+    let quantity = Number(quantityOfItems);
+    quantity -= 1
+    setQuantityOfItems(quantity)
+    let price = Number(priceOfItem)
+    let final = quantity * price
+    setTotalPrice(`$${final}.00`)
+}
+
+const incrementClicked = () => {
+    let quantity = Number(quantityOfItems);
+    quantity += 1
+    setQuantityOfItems(quantity)
+    let price = Number(priceOfItem)
+    let final = quantity * price
+    setTotalPrice(`$${final}.00`)
 }
 
 return (
@@ -37,7 +64,7 @@ content: {
     border: '2px solid black',
     overflowY: "hidden",
     overflowX: "hidden",
-    boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;"
+    boxShadow: "rgb(17 17 26 / 50%) 0px 8px 24px, rgb(17 17 26 / 40%) 0px 16px 56px, rgb(17 17 26 / 34%) 0px 24px 80px"
 }
 }}>
 <div className="addToCartModalParent">
@@ -50,9 +77,6 @@ content: {
             <div className='addToCardModalContentsProductName'><strong>Product Name: &nbsp;</strong>{props.nameForModal}</div>
             <div className='addToCardModalContentsProductCode'><strong>Product Code: &nbsp;</strong>{props.codeForModal}</div>
             <div className='addToCardModalContentsProductPrice'><strong>Product Price: &nbsp;</strong>{props.priceForModal}</div>
-
-            {/* <div className='addToCardModalContentsProductTotal'></div> */}
-            {/* <img className='addToCardModalDialoguePicture' src={prefix + props.imgSrcForModal}/> */}
             <div className='addToCardModalContentsViewCartContainer'>
                     <button className='addToCardModalContentsViewCart'>
                         <span className='addToCardModalViewCartButtonText'>View Cart</span>
@@ -63,19 +87,19 @@ content: {
             <div className='addToCardModalContentsQuantityContainer'>
                     <div className='addToCardModalContentsQuantitySubContainer'>
                         <div className='addToCardModalContentsQuantityDecrementButtonContainer'>
-                            <div className='addToCardModalContentsQuantityDecrementButton'>
+                            <div onClick={() => decrementClicked()} className='addToCardModalContentsQuantityDecrementButton'>
                                 <img className='addToCardModalContentsQuantityDecrementButtonImg' src={DecrementButton}/>
                             </div>
                         </div>
 
                         <div className='addToCardModalContentsQuantityNumberContainer'>
                             <div className='addToCardModalContentsQuantityNumberSubContainer'>
-                                <div className='addToCardModalContentsQuantityNumber'>1</div>
+                                <div className='addToCardModalContentsQuantityNumber'>{quantityOfItems}</div>
                             </div>
                         </div>
 
                         <div className='addToCardModalContentsQuantityIncrementButtonContainer'>
-                            <div className='addToCardModalContentsQuantityIncrementButton'>
+                            <div onClick={() => incrementClicked()} className='addToCardModalContentsQuantityIncrementButton'>
                                 <img className='addToCardModalContentsQuantityIncrementButtonImg' src={IncrementButton}/>
                             </div>
                         </div>
@@ -85,14 +109,9 @@ content: {
                 </div>
                 <div className='addToCardModalContentsTotalContainer'>
                     <div className='addToCardModalContentsTotal'>
-                        Total:
+                        Total: {totalPrice}
                     </div>
                 </div>
-                {/* <div className='addToCardModalContentsViewCartContainer'>
-                    <button className='addToCardModalContentsViewCart'>
-                        <span className='addToCardModalViewCartButtonText'>View Cart</span>
-                    </button>
-                </div> */}
                 <div className='addToCardModalContentsCheckoutContainer'>
                     <button className='addToCardModalCheckout'>
                         <span className='addToCardModalCheckoutButtonText'>Checkout</span>
