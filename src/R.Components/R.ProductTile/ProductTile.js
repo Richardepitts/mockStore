@@ -12,7 +12,7 @@ const ProductTile = ({ code, imgSrc, name, price}) => {
     const [ product, setProduct ] = useState('Product Name');
     const [ addToCartModalIsOpen, setAddToCartModalIsOpen ] = useState(false);
 
-    useEffect(() => {
+    useEffect(() => { 
 
     }, [])
 
@@ -20,7 +20,7 @@ const ProductTile = ({ code, imgSrc, name, price}) => {
         console.log(`add to cart called ${name} ${code} ${price}`)
         setAddToCartModalIsOpen(true)
     }
-
+ 
     
     return (
     <React.Fragment>
