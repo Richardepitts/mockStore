@@ -12,6 +12,7 @@ const ProductTile = ({ code, imgSrc, name, price}) => {
     const [ product, setProduct ] = useState('Product Name');
     const [ addToCartModalIsOpen, setAddToCartModalIsOpen ] = useState(false);
 
+    
     useEffect(() => { 
 
     }, [])
